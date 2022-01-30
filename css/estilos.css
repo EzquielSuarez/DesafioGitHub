@@ -1,0 +1,97 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: #f8ced8;
+}
+/*gird*/
+
+.contenedor{
+    height: 100vh;
+    display: grid;
+    grid-template-areas: "header header"
+                         "nav nav"
+                         "main main"
+                         "footer footer";
+
+    justify-content: center;
+
+}
+header{
+    grid-area: header;
+    justify-self: center;
+}
+
+nav{
+    grid-area: nav;
+    justify-self: center;
+    margin: 10px;
+}
+header h1 a{
+    text-decoration: none;
+    color: black;
+}
+
+/*Inicio Estilos de menu*/
+nav ul{
+    display: flex;
+    list-style: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    margin: 10px;
+    background-color: white;
+    border-radius: 50px;
+    padding: 5px;
+    
+}
+
+main{
+    grid-area: main;
+}
+/*Estilos de div main*/
+.divMain{
+    display: flex;
+    align-items: center;
+    
+
+}
+/*Estilos section main*/
+.sectionMail{
+    display: flex;
+    justify-content: space-between; /**Centrar lsa imagen*/
+    margin-bottom: 30px ;
+    
+}
+.sectionMail img{
+    width: 70%;
+}
+
+footer{
+    grid-area: footer;
+}
+
+footer p{
+    text-align: center;
+}
+
+/**media queries*/
+
+@media screen and (max-width: 500px) {
+    header{
+        margin-bottom: 5px;
+    }
+    .imgNone{
+        display: none;
+    }
+    
+}
+
+.sectionMail{
+    display: grid;
+    grid-template-columns: auto auto;
+}
